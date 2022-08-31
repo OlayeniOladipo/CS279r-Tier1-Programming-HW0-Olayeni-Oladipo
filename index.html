@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- <head> is the container for metadata/information about the web page's
+        properties. It also includes relevant links for fetching fonts and the
+        stylesheet (.css) file that informs for style of the page.  -->
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Todo List 2022 with LocalStorage</title>
+	<!--  CSS Import: Import the CSS Stylesheet.  -->
+	<link rel="stylesheet" href="main.css" />
+	<!-- End of CSS Import -->
+	<!-- Fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,400;0,700;0,900;1,400&family=Montserrat:ital,wght@0,400;0,700;0,900;1,400&display=swap" rel="stylesheet">
+	<!-- End of Fonts -->
+</head>
+<body>
+	<!-- App Wrapper: This is where the main sections and formatting goes. <main>
+         creates a "container for content". Pages should only have one <main> element. -->
+	<main class="app">
+        <!-- Greeting -->
+		<!-- <section class="ABC"> defines a <section> and assigns a class with 
+            classname "ABC" to the section. Classe determine the style of the 
+            element, and the classnames are defined in the CSS Stylesheet. -->
+		<section class="greeting">
+            <!-- <h2> is an HTML header like h1 through h6 where h1 is the most
+                important heading and h6 the least. There are additional attributes
+                that can define margins, font weight, etc. With any header may be
+                many elements. -->
+			<h2 class="title">
+                <!-- Below creates an input control that can take in user inputs.
+                The type of the input vary from  a text field and radio buttons to
+                checkboxes and submit buttons. id defines a unique identifier name 
+                for the input and placeholder provides a text hint.  -->
+				What's up, <input type="text" id="name" placeholder="Name here" />
+			</h2>
+		</section>
+		<!-- End of Greeting -->
+		
+		<!-- New Todo -->
+		<section class="create-todo">
+			<h3>CREATE A TODO</h3>
+            <!-- <form id="ABC"> defines a form with unique identifer "ABC". Within
+                 the form tag may be many elements like inputs, buttons, and labels.  -->
+			<form id="new-todo-form">
+				<h4>What's on your todo?</h4>
+                <!-- <input...> is of the same form as the input field in the greeting. Note
+                    the id "content" that will allow later on for a specific style defined in
+                    the stylesheet.  -->
+				<input 
+					type="text" 
+					placeholder="e.g. Get some milk"
+					name="content"
+					id="content" />
+				
+				<h4>Pick a category</h4>
+                <!-- <div class="ABC"> defs a section in the web page styled with CSS. The <div>
+                     serves a division/section/container for HTML "block-level" elements. The
+                     browser automatically adds a line break before and after the <div> element. -->
+				<div class="options">
+					<label>
+                        <!-- type="radio" is radio button. Two or more radio buttons are required 
+                             with the functionality that only one option may be selected. All radio
+                            buttons with the same name belong in the same group.  -->
+						<input type="radio" name="category" id="category1" value="business" /> 
+                        <!-- <span class="ABC"> defines an element with class "ABC" that is used to 
+                             color a part of a text. <span> is an inline container easily styled with
+                             reference to the class or id.  -->
+						<span class="bubble business"></span>
+						<div>Business</div>
+					</label>
+					<label>
+						<input type="radio" name="category" id="category2" value="personal" />
+						<span class="bubble personal"></span>
+						<div>Personal</div>
+					</label>
+				</div>
+                
+                <!-- this <input> now takes type="submit". <submit> creates a submit button which when
+                     clicked can send form data to a handler. -->
+				<input type="submit" value="Add todo" />
+			</form>
+		</section>
+		<!-- End of New Todo -->
+
+		<!-- Todo List -->
+		<section class="todo-list">
+			<h3>TODO LIST</h3>
+			<div class="list" id="todo-list"></div>
+		</section>
+		<!-- End of Todo List -->
+
+	</main>
+	<!-- End of App Wrapper -->
+
+	<!-- JS Import -->
+	<script src="main.js"></script>
+	<!-- End of JS Import -->
+</body>
+</html>
