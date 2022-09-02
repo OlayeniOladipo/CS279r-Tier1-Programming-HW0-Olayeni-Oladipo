@@ -9,12 +9,19 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<title>Todo List 2022 with LocalStorage</title>
 	<!--  CSS Import: Import the CSS Stylesheet.  -->
+    <!-- <link rel="ABC" href="XYZ"> specifies relationship "ABC" between an
+          external resource and the current document-->
 	<link rel="stylesheet" href="main.css" />
 	<!-- End of CSS Import -->
 	<!-- Fonts -->
+    <!-- rel="preconnect" tells the browser to form a connection to the resource. -->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
+    <!-- crossorigin allows for fetching resources from multiple sources/origins. -->
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Given the connected font, you can access them in the main.css stylesheet. -->
 	<link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,400;0,700;0,900;1,400&family=Montserrat:ital,wght@0,400;0,700;0,900;1,400&display=swap" rel="stylesheet">
+    <!-- OLAYENI added a new font -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
 	<!-- End of Fonts -->
 </head>
 <body>
@@ -35,24 +42,24 @@
                 The type of the input vary from  a text field and radio buttons to
                 checkboxes and submit buttons. id defines a unique identifier name 
                 for the input and placeholder provides a text hint.  -->
-				What's up, <input type="text" id="name" placeholder="Name here" />
+				To Do List for: <input type="text" id="name" placeholder="Name here" />
 			</h2>
 		</section>
 		<!-- End of Greeting -->
 		
 		<!-- New Todo -->
 		<section class="create-todo">
-			<h3>CREATE A TODO</h3>
+			<h3>Add to your To Do List</h3>
             <!-- <form id="ABC"> defines a form with unique identifer "ABC". Within
                  the form tag may be many elements like inputs, buttons, and labels.  -->
 			<form id="new-todo-form">
-				<h4>What's on your todo?</h4>
+				<h4>What do you need to do?</h4>
                 <!-- <input...> is of the same form as the input field in the greeting. Note
                     the id "content" that will allow later on for a specific style defined in
                     the stylesheet.  -->
 				<input 
 					type="text" 
-					placeholder="e.g. Get some milk"
+					placeholder="e.g. Do my CS279r Homework"
 					name="content"
 					id="content" />
 				
@@ -70,7 +77,7 @@
                              color a part of a text. <span> is an inline container easily styled with
                              reference to the class or id.  -->
 						<span class="bubble business"></span>
-						<div>Business</div>
+						<div>Academic</div>
 					</label>
 					<label>
 						<input type="radio" name="category" id="category2" value="personal" />
@@ -81,14 +88,14 @@
                 
                 <!-- this <input> now takes type="submit". <submit> creates a submit button which when
                      clicked can send form data to a handler. -->
-				<input type="submit" value="Add todo" />
+				<input type="submit" value="Add to do" />
 			</form>
 		</section>
 		<!-- End of New Todo -->
 
 		<!-- Todo List -->
 		<section class="todo-list">
-			<h3>TODO LIST</h3>
+			<h3>To Do List:</h3>
 			<div class="list" id="todo-list"></div>
 		</section>
 		<!-- End of Todo List -->

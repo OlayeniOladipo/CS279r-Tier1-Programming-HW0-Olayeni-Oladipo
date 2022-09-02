@@ -1,26 +1,34 @@
 /* Variables */
+/* :root selector matches the root element (html) of the document.
+   Varibles here may be used globally throughout the file. */
 :root {
-	--primary: #EA40A4;
-	--business: #3a82ee;
+	--primary: #c41a1a;
+	--business: #295ec7;
+    /* OLAYENI ADDED */
+    --secondary: #dcb43b;
+    /* var( ) insers the value of a CSS variable into another variable*/
 	--personal: var(--primary);
 	--light: #EEE;
 	--grey: #888;
 	--dark: #313154;
-	--danger: #ff5b57;
+	--danger: #d50400;
 
+    /* horizonal | vertical | blur | color */
 	--shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 
 	--business-glow: 0px 0px 4px rgba(58, 130, 238, 0.75);
 	--personal-glow: 0px 0px 4px rgba(234, 64, 164, 0.75);
+    --secondary-glow: 0px 0px 4px rgba(247, 220, 68, 0.75);
 }
 /* End of Variables */
 
-/* Resets */
+/* Resets - a list of rules for all browsers on which the page appears. */
 * {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-	font-family: 'montserrat', sans-serif;
+	/*font-family: 'montserrat', sans-serif;*/
+    font-family: 'Open Sans', sans-serif;
 }
 
 input:not([type="radio"]):not([type="checkbox"]), button {
@@ -32,11 +40,15 @@ input:not([type="radio"]):not([type="checkbox"]), button {
 }
 /* End of Resets */
 
+/* Generally, CSS works in the following format:
+   selector { declaration } whereby the selector points to an HTML element
+   and the declaration contains properites and values that define the style.  */
 body {
 	background: var(--light);
 	color: var(--dark);
 }
 
+/* rem stands for root em, a unit of measurement font sizes of root elements. */
 section {
 	margin-top: 2rem;
 	margin-bottom: 2rem;
@@ -58,12 +70,15 @@ h4 {
 	margin-bottom: 0.5rem;
 }
 
+/* Greeting is established in the index.html. */
 .greeting .title {
-	display: flex;
+    /*flex sets flexible length on the items*/
+    margin-left: flex;
 }
 
+/* This styles the input object within the greeting section and title h2. */
 .greeting .title input {
-	margin-left: 0.5rem;
+	margin-left: flex;
 	flex: 1 1 0%;
 	min-width: 0;
 }
@@ -111,6 +126,8 @@ input[type="checkbox"] {
 	display: none;
 }
 
+/* Note the bubble id only appears in the main.js but
+   style is defined her. */
 .bubble {
 	display: flex;
 	align-items: center;
@@ -122,11 +139,13 @@ input[type="checkbox"] {
 	box-shadow: var(--business-glow);
 }
 
+/* This defines the style for the "bubble personal" span element in index.html */
 .bubble.personal {
 	border-color: var(--personal);
 	box-shadow: var(--personal-glow);
 }
 
+/* ::after inserts something after a selected element. */
 .bubble::after {
 	content: '';
 	display: block;
@@ -144,6 +163,8 @@ input[type="checkbox"] {
 	box-shadow: var(--personal-glow);
 }
 
+/* ~ symbol is a general sibling selector, selecting all *next* elements
+ that are siblings of the specified element. */
 input:checked ~ .bubble::after {
 	width: 10px;
 	height: 10px;
@@ -163,9 +184,9 @@ input:checked ~ .bubble::after {
 	padding: 1rem 1.5rem;
 	color: #FFF;
 	font-weight: 700;
-	text-transform: uppercase;
-	background-color: var(--primary);
-	box-shadow: var(--personal-glow);
+	/*text-transform: uppercase;*/
+	background-color: var(--secondary);
+	box-shadow: var(--secondary-glow);
 	border-radius: 0.5rem;
 	cursor: pointer;
 	transition: 0.2s ease-out;
@@ -224,7 +245,7 @@ input:checked ~ .bubble::after {
 
 .todo-item .actions .edit {
 	margin-right: 0.5rem;
-	background-color: var(--primary);
+	background-color: var(--business);
 }
 
 .todo-item .actions .delete {
