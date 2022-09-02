@@ -1,5 +1,9 @@
 # CS279r
-CS279r Programming Assignments
+[Tier 1] Programming HW0: Make a To-Do App with just HTML, CSS, and JS
+Olayeni Oladipo
+September 2, 2022
+
+Instructions to launch prototype:
 
 1) Clone or download this repo, saving the files to a directory
 2) Open terminal and CD into the directory of the downloaded files.
