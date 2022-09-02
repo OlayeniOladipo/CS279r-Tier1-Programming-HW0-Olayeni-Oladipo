@@ -1,7 +1,7 @@
 # CS279r
-[Tier 1] Programming HW0: Make a To-Do App with just HTML, CSS, and JS
-Olayeni Oladipo
-September 2, 2022
+[Tier 1] Programming HW0: Make a To-Do App with just HTML, CSS, and JS <br />
+Olayeni Oladipo <br />
+September 2, 2022 <br />
 
 Instructions to launch prototype:
 
