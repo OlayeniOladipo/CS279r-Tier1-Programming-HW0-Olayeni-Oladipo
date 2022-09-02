@@ -28,9 +28,11 @@
 	padding: 0;
 	box-sizing: border-box;
 	/*font-family: 'montserrat', sans-serif;*/
+    /* OLAYENI ADDED */
     font-family: 'Open Sans', sans-serif;
 }
 
+/* :not[...] allows for certain selectors to be excluded from a style change. */
 input:not([type="radio"]):not([type="checkbox"]), button {
 	appearance: none;
 	border: none;
@@ -83,6 +85,7 @@ h4 {
 	min-width: 0;
 }
 
+/* A comma between two selectors applies the same declaration to both. */
 .greeting .title, 
 .greeting .title input {
 	color: var(--dark);
@@ -90,6 +93,8 @@ h4 {
 	font-weight: 700;
 }
 
+/* [type="text"] specifices the type of input that we are editing in the 
+   create-todo class. */
 .create-todo input[type="text"] {
 	display: block;
 	width: 100%;
